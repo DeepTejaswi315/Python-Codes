@@ -1,0 +1,14 @@
+def fib(a,b,c,n,i=1):
+    if i>n:
+        return
+    else:
+        print(a,end=' ')
+        c=a+b
+        a=b
+        b=c
+        fib(a,b,c,n,i+1)
+n=int(input())
+a=0
+b=1
+c=a+b
+fib(a,b,c,n)
