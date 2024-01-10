@@ -1,0 +1,20 @@
+class Solution:
+    def asteroidCollision(self, N, asteroids):
+        # Code here
+        a = []
+        for i in asteroids:
+            while a and i < 0 < a[-1]:
+                if a[-1] < -i:
+                    a.pop()
+                    #print(stack.pop(),"--") 
+                    continue
+                elif a[-1] == -i:
+                    a.pop()
+                    #print(stack.pop(),"-+")
+                break
+
+            else:
+                a.append(i)
+                #print(i,"+")
+
+        return a
